@@ -2,11 +2,11 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Myapp</a>
+                <a class="navbar-brand selectedTab" href="{{pathFor 'home'}}" data-tab="home">Myapp</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">My package</a></li>
-                <li><a href="#">Slick package</a></li>
+                <li class="{{getActiveClass 'myPackage'}} selectedTab" data-tab="myPackage"><a href="{{pathFor 'myPackage'}}">My package</a></li>
+                <li class="{{getActiveClass 'slickPackage'}} selectedTab" data-tab="slickPackage"><a href="{{pathFor 'slickPackage'}}">Slick package</a></li>
             </ul>
         </div>
     </nav>
