@@ -11,6 +11,7 @@ Template.layout.helpers({
 
 Template.layout.events({
     'click .selectedTab':function(e,template){
+        console.log("aa");
         var currentTab=$(e.target).closest('.selectedTab').attr('data-tab');        
         template.activeTab.set(currentTab);
     }
