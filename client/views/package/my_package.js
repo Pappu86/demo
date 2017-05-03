@@ -1,3 +1,3 @@
-Template.myPackage.onRendered(function(){    
+Template.myPackage.onRendered(function () {
     $('#demoCarousel').myCarousel();
 });
