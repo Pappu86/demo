@@ -1,0 +1,12 @@
+.carousel-obj{
+    background: #fff;
+    min-height: 140px;
+    padding: 60px;
+}
+.carousel-arrow{
+    margin-top: 40px;
+    font-size: 30px !important;
+    color:#fff;
+    cursor: pointer;
+    padding: 10px;
+}
