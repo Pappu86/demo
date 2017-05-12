@@ -1,3 +1,7 @@
+Template.carousel.onRendered(function(){
+
+});
+
 Template.carousel.events({
     'click #leftSlider': function (e) {
         manageSlider("left");
@@ -9,25 +13,23 @@ Template.carousel.events({
 
 
 var manageSlider = function (sliderDirection) {
-    var currentSlide = $("[data-activeSlider='active']").attr('data-value') * 1;
+    var currentSlide = $("[data-activeSlider='active']").attr('data-value') * 1,
+        nextSlide=2;
     
     //Previous slide
     if (sliderDirection === 'left') {
-        if (currentSlide === 1) currentSlide = 6;
-        else currentSlide = currentSlide - 1;
+        if (currentSlide === 1) nextSlide = 6;
+        else nextSlide = currentSlide - 1;
+
+
     }
 
     //Next slide
     if (sliderDirection === 'right') {
-        if (currentSlide === 6) currentSlide = 1;
-        else currentSlide = currentSlide + 1;
+        if (currentSlide === 6) nextSlide = 1;
+        else nextSlide = currentSlide + 1;
     }
-
-    $(".carousel-obj").each(function (index) {
-        var $this = $(this),
-            sliderNumber = $this.attr('data-value') * 1;
-
-        if (currentSlide === sliderNumber) $this.removeClass('opacity-0').attr('data-activeSlider', 'active');
-        else $this.addClass('opacity-0').removeAttr('data-activeSlider');
-    });
+    
+    $("[data-activeSlider='active']").fadeOut(500).removeAttr('data-activeSlider');
+    $("[data-value='"+nextSlide+"']").attr('data-activeSlider', 'active').fadeIn(2000);
 }

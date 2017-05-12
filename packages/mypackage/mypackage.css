@@ -4,15 +4,17 @@
     padding: 60px;
     font-size:20px;
     margin-bottom: 5px;
-    position: absolute;
+    position: absolute;    
 }
+
+[data-activeslider="active"]{
+    display: block;    
+}
+
 .carousel-arrow{
     margin-top: 40px;
     font-size: 30px !important;
     color:#fff;
     cursor: pointer;
     padding: 10px;
-}
-.opacity-0{
-    opacity: 0;
 }
