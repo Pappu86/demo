@@ -14,4 +14,5 @@ Package.onUse(function (api) {
         "slick-override.css",
         "slick.js"
     ], 'client');
+    api.addAssets(['slick.scss', "slick-theme.scss"], 'client');
 });
