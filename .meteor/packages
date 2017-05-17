@@ -23,5 +23,6 @@ iron:router
 twbs:bootstrap
 pappu:mypackage
 pappu:slick
+pappu:bootstrap-datetimepicker
 fortawesome:fontawesome
 fourseven:scss

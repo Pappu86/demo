@@ -61,6 +61,7 @@ observe-sequence@1.0.16
 ordered-dict@1.0.9
 pappu:mypackage@0.0.1
 pappu:slick@1.6.0
+pappu:bootstrap-datetimepicker@2.0.0
 promise@0.8.8
 random@1.0.10
 reactive-dict@1.1.8
